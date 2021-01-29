@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario1-AP8</title>
+</head>
+<body>
+
+	<form action='formulario.php' method='post' name='formulario1'>
+       	<span>Nombre</span>
+        <input id='nombre' name='nombre' type='text' placeholder='Nombre' required="" />
+        <input type="text" name='apellidos' placeholder="Apellidos" required=""></br>
+        <span>Email</span>
+       	<input type="email" name='email' placeholder="<introduce email>"></br>
+       	<span>Sexo</span>		
+       	<input type="radio" name="radio" id="radio1" value="1">Hombre
+       	<!-- Utilizamos el atributo 'checked' en la opción 'Mujer' para marcar esa casilla por defecto -->
+        <input type="radio" name="radio" id="radio2" checked value="2">Mujer</br>
+        <span>Fecha de Nacimiento</span>
+        <input type="date" name="fecha" id="fecha" min="1900-01-01" max="2050-12-31"></br>
+        <span>Contraseña</span>
+        <!-- ?! este simbolo quiere decir que hace Match negativo si no existe "." o "*" o "\" 
+         ?= este simbolo quiere decir que hace Match positivo si existe "." o "*" o "\" 
+        (?=\w*\d) debe contener al menos un digito 
+        (?=\w*[A-Z]) debe contener al menos una mayuscula 
+        (?=\w*[a-z]) debe contener al menos una minuscula -->
+        <input type="password" name="password" id="password" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,}$"></br>
+        <span>Móvil</span>	
+        <input type="tel" name="telefono" maxlength="9"></br>
+        <span>Sitio Web</span>
+        <input list="browsers" name="myBrowser" /></label>
+			<datalist id="browsers">
+  				<option value="http://www.floridauniversitaria.es">
+  				<option value="http://www.uv.es">
+  				<option value="http://www.upv.es">
+            </datalist></br>
+         <input type="submit" name="envio" id="envio" value="Enviar Datos">
+         <input type="reset" name="envio" id="envio" value="Borrar Datos">
+    </form>
+
+
+
+
+	
+</body>
+</html>

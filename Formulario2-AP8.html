@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario2-AP8</title>
+</head>
+<body>
+	<!-- El atributo enctype="multipart/form-data" debe ser incluido dentro del elemento form
+	para soportar el envio de archivos ( en este caso en <input type="file">)  -->
+	<form action="formulario2.php" name="formulario" enctype="multipart/form-data" method="post">
+			<label>Provincias Españolas
+			<input list="provincias" name="cities"></label>
+				<datalist id="provincias">
+					<option value="Extremadura"></option>
+					<option value="Pais Vasco"></option>
+					<option value="Asturias"></option>
+				</datalist></br>
+			<input type="text" name="pais" autofocus placeholder="Introduce País" required><br>
+			<input type="number" name="numero" min="0" max="10"><br>
+			<input type="file" name="archivosSubidos[]" multiple><br>
+			<input type="password" name="contraseña" pattern="[0-9][a-zA-Z0-9]{6}[A-Z]*" minlength="8" required><br>
+			<input type="week" name="una_semana" list="lista_semanal">
+			<datalist id="lista_semanal">
+			<option value="2021-W50"></option>
+			<option value="2021-W34"></option>
+			</datalist><br>
+			<input type="search" name="busqueda_codigo" placeholder="codigo" size="6" maxlength="6">
+			<input type="submit" value="Buscar"><br>
+			<span>Modalidad Deportiva:</span><br>
+			<label><input type="checkbox" name="Crossfit">Crossfit</label><br>
+			<label><input type="checkbox" name="Halterofilia">Halterofilia</label><br>
+			<label><input type="checkbox" name="Culturismo" checked>Culturismo</label><br><br>
+			<span>Para entrar al programa debes aceptar nuestros términos del servicio</span><br>
+			<label><input type="checkbox" name="cb-terminosservicio" required>Acepto los términos del servicio</label><br>
+			<input type="submit" value="Enviar datos"><br><br><br>
+			<input type="submit" name="envio" value="Enviar Datos">
+         <input type="reset" name="borrado" value="Borrar Datos">
+		
+	</form>
+	
+</body>
+</html>

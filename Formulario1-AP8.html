@@ -20,23 +20,25 @@
         <span>Fecha de Nacimiento</span>
         <input type="date" name="fecha" id="fecha" min="1900-01-01" max="2050-12-31"></br>
         <span>Contraseña</span>
-        <!-- ?! este simbolo quiere decir que hace Match negativo si no existe "." o "*" o "\" 
+        <!-- pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8}$"
+
+        ?! este simbolo quiere decir que hace Match negativo si no existe "." o "*" o "\" 
          ?= este simbolo quiere decir que hace Match positivo si existe "." o "*" o "\" 
         (?=\w*\d) debe contener al menos un digito 
         (?=\w*[A-Z]) debe contener al menos una mayuscula 
         (?=\w*[a-z]) debe contener al menos una minuscula -->
-        <input type="password" name="password" id="password" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,}$"></br>
+        <input type="password" name="password" id="password" pattern="[a-zA-Z0-9]{8}"></br>
         <span>Móvil</span>	
         <input type="tel" name="telefono" maxlength="9"></br>
         <span>Sitio Web</span>
-        <input list="browsers" name="myBrowser" /></label>
+        <input list="browsers" name="paginas_web" />
 			<datalist id="browsers">
   				<option value="http://www.floridauniversitaria.es">
   				<option value="http://www.uv.es">
   				<option value="http://www.upv.es">
             </datalist></br>
-         <input type="submit" name="envio" id="envio" value="Enviar Datos">
-         <input type="reset" name="envio" id="envio" value="Borrar Datos">
+         <input type="submit" name="envio" value="Enviar Datos">
+         <input type="reset" name="borrado" value="Borrar Datos">
     </form>
 
 
